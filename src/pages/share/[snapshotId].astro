@@ -25,7 +25,7 @@ const isMobile = mobileUserAgent(Astro.request.headers.get('user-agent') ?? '')
 
 <html lang='en'>
 	<head>
-		<StandardHead title={snapshotData.name || 'Shared Game'} />
+		<StandardHead title={snapshotData.name || 'Shared Game'} viewport={isMobile?"maximum-scale=1, user-scalable=no":""} />
 	</head>
 	<body>
 		{isMobile ? (
